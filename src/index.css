@@ -1,0 +1,174 @@
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #626871;
+  padding: 20px;
+}
+.board-container{width: 80dvw;overflow: hidden;
+  display: flex;
+}.columns-row{display: flex;width: 90dvw;overflow-x: scroll;scrollbar-width: thin;gap: 10px;min-height: 400px;}.card-content{
+  display: flex;justify-content: space-between;width: 100%;
+
+button{
+  height: 30px;
+}}
+/* Board layout */
+.board {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+/* Column container */
+.column {
+  display: flex;
+  flex-direction: column;
+  background-color: #333235;
+  width: 280px;gap: 20px;
+  border-radius: 8px;
+  padding: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+}
+
+/* Column header */
+.column-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Scrollable cards section */
+.card-list {
+  overflow-y: scroll;
+  flex-grow: 1;height: 100%;
+  padding-right: 4px;scrollbar-width: none;
+  margin-bottom: 12px;
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+.card:hover {
+  background-color: #f4f5f7;
+}
+.card:active {
+  cursor: grabbing;
+  transform: rotate(-1deg);filter: blur(1px);
+}
+
+/* Add Task Section */
+.add-task-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.new-column-input {
+  width: 230px;
+  padding: 6px; top:20%;  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}.new-card-input{
+  width: 260px;
+  padding: 6px; top:20%;  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Button */
+.add-card-btn{
+
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;}
+.add-column-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-card-btn {
+  background-color: #0079bf;
+  color: white;
+}
+.add-card-btn:hover {
+  background-color: #026aa7;
+}
+
+.add-column-btn {
+  background-color: #5aac44;
+  color: white;
+}
+.add-column-btn:hover {
+  background-color: #519839;
+}
+
+/* Delete buttons */
+.delete-card-btn,
+.delete-column-btn {
+  background-color: #ff5f57;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.delete-card-btn:hover,
+.delete-column-btn:hover {
+  background-color: #ff3838;
+}
+
+/* New column container */
+.new-column {
+  min-width: 250px;
+  background: #e2e4e6;
+  padding: 12px;
+  border-radius: 6px;
+  height: fit-content;
+  display: flex;position: fixed;
+  flex-direction: column;
+
+}
+
+/* Placeholder (lazy loading) */
+.column-placeholder {
+  width: 250px;
+  min-height: 300px;
+  background: #ccc;
+  border-radius: 6px;
+  margin: 0 8px;
+}
+.column {
+  transition: all 0.3s ease-in-out;
+}
+
+.card {
+  transition: transform 0.2s ease-out;
+}
