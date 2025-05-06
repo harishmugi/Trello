@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import type { ColumnType } from '../types';
-import Column from './column';
+import Column from './Column';
 
 type Props = {
   columns: ColumnType[];

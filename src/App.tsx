@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Board from './components/Board';
 import type { ColumnType } from './types';
 import './index.css'
