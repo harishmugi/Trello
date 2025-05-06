@@ -72,7 +72,7 @@ const Board = ({ columns, setColumns }: Props) => {
         ))}
       </div>
 
-      {/* Draggable New Column UI */}
+      
       <div
         className="new-column"
         style={{

@@ -1,5 +1,7 @@
 import React from 'react';
 import type { CardType } from '../types';
+import DeleteIcon from '../assets/delete.png';
+
 
 type Props = {
   card: CardType;
@@ -21,14 +23,13 @@ const Card = ({ card, columnId, handleDeleteCard }: Props) => {
     <div
       className="card"
       draggable
-      onDragStart={handleDragStart}  
-    
+      onDragStart={handleDragStart}
+
     >
       <div className="card-content">
         <div>{card.title}</div>
         <button className="delete-card-btn" onClick={handleDelete}>
-          Delete
-        </button>
+<img src={DeleteIcon}  width={'20px'}/>        </button>
       </div>
     </div>
   );

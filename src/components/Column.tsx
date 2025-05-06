@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import DeleteIcon from '../assets/delete.png';
+;import React, { useEffect, useRef, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import type { ColumnType, CardType } from '../types';
 import Card from './Card';
@@ -133,7 +134,7 @@ const Column = ({ column, columns, setColumns, updateColumn }: Props) => {
     >
       <div className="column-header">
         <h3 className="column-title">{column.title}</h3>
-        <button className="delete-column-btn" onClick={handleDeleteColumn}>Delete Column</button>
+        <button className="delete-column-btn" onClick={handleDeleteColumn}><img src={DeleteIcon} width={'20px'} /></button>
       </div>
 
       <div
@@ -155,8 +156,8 @@ const Column = ({ column, columns, setColumns, updateColumn }: Props) => {
           scrollableTarget={`scrollable-${column.id}`}
           loader={<h4 style={{ textAlign: 'center' }}>Loading...</h4>}
           endMessage={
-            <p style={{ textAlign: 'center' }}>
-              <b>Add your task here!</b>
+            <p style={{ textAlign: 'center',color:'#fff' }}>
+              <em>Add your task here!</em>
             </p>
           }
         >
